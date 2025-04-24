@@ -4,8 +4,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="w-full px-6 py-4 flex justify-between items-center outline outline-1 outline-white fixed top-0 z-100 h-[10vh] backdrop-blur-xs">
-      <div className="text-xl font-black pl-10 md:pl-30 text-white">
+    <nav className="w-full px-6 py-4 flex justify-between items-center  outline outline-1 outline-white fixed top-0 z-100 h-[10vh] backdrop-blur-xs">
+      <div className="text-xl font-black pl-10 md:pl-30 text-white mix-blend-difference">
         CASA DE PIEDRA
       </div>
 

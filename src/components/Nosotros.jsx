@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Nosotros() {
   return (
     <>
@@ -14,7 +15,7 @@ function Nosotros() {
           que promueven el aprendizaje vivencial y el desarrollo humano.
         </div>
         <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-35px] flex justify-center items-center">
-          <div className="w-[70px] h-[70px] bg-[url('/img/arrow.png')] bg-contain bg-no-repeat"></div>
+          <div className="w-[70px] h-[70px] bg-[url('/img/arrow.png')] bg-contain bg-no-repeat animate-bounce"></div>
         </div>
       </div>
 
@@ -38,7 +39,7 @@ function Nosotros() {
           </div>
         </div>
       </div>
-      <div className='photo-section h-[35vh] bg-[url("/img/chinito.jpeg")] bg-cover bg-center'></div>
+      <div className='photo-section h-[50vh] bg-[url("/img/chinito.jpeg")] bg-cover bg-center'></div>
     </>
   );
 }
