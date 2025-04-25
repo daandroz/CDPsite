@@ -14,7 +14,7 @@ const Navbar = () => {
         className={`${
           isOpen ? "flex h-screen" : "hidden"
         } flex-col absolute top-full left-0 w-full backdrop-blur bg-black/60 text-white text-4xl items-center gap-6 py-6
-  md:flex md:flex-row md:static md:w-[30%] md:pr-20 md:bg-transparent md:backdrop-blur-0 md:text-base md:gap-6 md:py-0 md:h-auto`}
+  md:flex md:flex-row md:static md:w-[30%] md:pr-20 md:bg-transparent md:backdrop-blur-0 md:text-base md:gap-6 md:py-6 md:h-auto`}
       >
         <li>
           <a href="#inicio" className="hover:text-gray-700 font-extralight">
