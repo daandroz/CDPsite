@@ -22,6 +22,96 @@ const testimonios = [
     src: '/img/testimonio2.png',
     tipo: 'imagen',
   },
+  {
+    texto: 'Desde que llegué me sentí escuchada. Cada sesión me ayudó a conectar conmigo misma de una manera que jamás había experimentado.',
+    autor: 'Anneth, 23 años',
+    tipo: 'texto',
+    fondo: 'bg-pink-300',
+  },
+  {
+    src: '/img/testimonio3.jpg',
+    tipo: 'imagen',
+  },
+  {
+    texto: 'Al principio dudaba, pero me sorprendió la manera tan humana y cercana en la que trabajan. Realmente sales transformado de cada encuentro.',
+    autor: 'Luis, 31 años',
+    tipo: 'texto',
+    fondo: 'bg-sky-200',
+  },
+  {
+    src: '/img/testimonio4.jpg',
+    tipo: 'imagen',
+  },
+  {
+    texto: 'Me sentí acompañado todo el proceso, no como un número más. Aquí entienden lo que de verdad importa para crecer y sanar.',
+    autor: 'Jorge, 25 años',
+    tipo: 'texto',
+    fondo: 'bg-lime-300',
+  },
+  {
+    src: '/img/testimonio5.jpg',
+    tipo: 'imagen',
+  },
+  {
+    texto: 'Nunca es tarde para empezar de nuevo. Gracias a ustedes recuperé partes de mí que pensaba que ya había perdido para siempre.',
+    autor: 'Denni, 60 años',
+    tipo: 'texto',
+    fondo: 'bg-pink-300',
+  },
+  {
+    src: '/img/testimonio6.jpg',
+    tipo: 'imagen',
+  },
+  {
+    texto: 'Encontré un espacio donde pude ser yo mismo, sin miedo al juicio. Me ayudaron a confiar más en mí y en mi camino.',
+    autor: 'David, 18 años',
+    tipo: 'texto',
+    fondo: 'bg-sky-200',
+  },
+  {
+    src: '/img/testimonio7.jpg',
+    tipo: 'imagen',
+  },
+  {
+    texto: 'Aquí aprendí que no hay edad para buscar ayuda. Me escucharon con el corazón y me dieron herramientas que me sirven día a día.',
+    autor: 'Dante, 19 años',
+    tipo: 'texto',
+    fondo: 'bg-lime-300',
+  },
+  {
+    src: '/img/testimonio8.jpg',
+    tipo: 'imagen',
+  },
+  {
+    texto: 'No sabía qué esperar, pero salí renovado. Cada palabra, cada momento compartido, hizo una diferencia real en mi forma de ver la vida.',
+    autor: 'Guido, 25 años',
+    tipo: 'texto',
+    fondo: 'bg-pink-300',
+  },
+  {
+    src: '/img/testimonio9.jpg',
+    tipo: 'imagen',
+  },
+  {
+    texto: 'No imaginaba lo mucho que podía avanzar en tan poco tiempo. Me llevo herramientas valiosas para mi vida personal y profesional.',
+    autor: 'Edgar, 29 años',
+    tipo: 'texto',
+    fondo: 'bg-sky-200',
+  },
+  {
+    src: '/img/testimonio10.jpg',
+    tipo: 'imagen',
+  },
+  {
+    texto: 'Cada sesión fue un paso más hacia una mejor versión de mí. Estoy profundamente agradecida por el acompañamiento recibido aquí.',
+    autor: 'Ary, 28 años',
+    tipo: 'texto',
+    fondo: 'bg-lime-300',
+  },
+  {
+    src: '/img/testimonio11.jpg',
+    tipo: 'imagen',
+  },
 ];
 
 const Testimonios = () => {

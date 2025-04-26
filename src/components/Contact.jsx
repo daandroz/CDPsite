@@ -128,7 +128,7 @@ Notas: ${notas || "Ninguna"}`;
   return (
     <div className="relative flex flex-col min-h-screen bg-white">
       
-      {/* Main content */}
+      
       <div className="flex flex-1 flex-row">
         <div className="w-[40%] bg-[#4834d4]">
           <div className="h-full flex flex-col items-center justify-center px-6 text-white">
