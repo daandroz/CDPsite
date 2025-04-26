@@ -126,7 +126,7 @@ Notas: ${notas || "Ninguna"}`;
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="relative flex flex-col min-h-screen bg-white">
       
       {/* Main content */}
       <div className="flex flex-1 flex-row">
@@ -201,11 +201,12 @@ Notas: ${notas || "Ninguna"}`;
           </div>
         </div>
 
-        <div className="w-[60%] bg-[url('/img/contact-bg.png')] bg-cover bg-center" />
+        <div className="w-[60%] relative bg-[url('/img/contact-bg.png')] bg-cover bg-center" />
+        <Footer />
       </div>
 
-      {/* Footer abajo */}
-      <Footer />
+      
+      
 
     </div>
   );
