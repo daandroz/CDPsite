@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.4",
     "animate.css": "^4.1.1",
+    "firebase": "^11.6.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "sweetalert2": "^11.19.1",
+    "sweetalert2-react-content": "^5.1.0",
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
