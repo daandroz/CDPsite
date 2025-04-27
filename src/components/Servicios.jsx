@@ -6,28 +6,28 @@ const servicios = [
     serviceType: "Documento",
     serviceTitle: "Planificación Personal de Entrenamiento",
     serviceDescription: "Diagnóstico y diseño de tu programa de entrenamiento para escalar",
-    image: "https://cdn.sanity.io/images/yb9xf4jc/production/e470f77c327e86457795c994350b75f4d484a4d6-600x400.jpg",
+    image: "/img/servicio1.jpg",
   },
   {
     duration: "1 día",
     serviceType: "Sesión",
     serviceTitle: "Sesiones de Entrenamiento Personal",
     serviceDescription: "Una hora enfocada 100% en ti. Técnica, fuerza o táctica, tú eliges la prioridad.",
-    image: "https://cdn.sanity.io/images/yb9xf4jc/production/e470f77c327e86457795c994350b75f4d484a4d6-600x400.jpg",
+    image: "/img/servicio2.jpg",
   },
   {
     duration: "8 horas al mes",
     serviceType: "Curso",
     serviceTitle: "Entrenamiento Grupal en Rocódromo",
     serviceDescription: "Entrena en grupo con acompañamiento profesional y una comunidad que empuja contigo.",
-    image: "https://cdn.sanity.io/images/yb9xf4jc/production/e470f77c327e86457795c994350b75f4d484a4d6-600x400.jpg",
+    image: "/img/servicio3.jpg",
   },
   {
     duration: "3 días",
     serviceType: "Curso",
     serviceTitle: "Autogestión del Entrenamiento en Escalada",
     serviceDescription: "Curso completo para que diseñes y gestiones tu propio entrenamiento, ideal si ya tienes experiencia.",
-    image: "https://cdn.sanity.io/images/yb9xf4jc/production/e470f77c327e86457795c994350b75f4d484a4d6-600x400.jpg",
+    image: "/img/servicio4.jpg",
     
   },
   {
@@ -35,7 +35,7 @@ const servicios = [
     serviceType: "Sesiones",
     serviceTitle: "Curso de Seguridad: Escalada en YoYo",
     serviceDescription: "Aprende a asegurar y escalar con seguridad en modalidad top rope (yo-yo).",
-    image: "https://cdn.sanity.io/images/yb9xf4jc/production/e470f77c327e86457795c994350b75f4d484a4d6-600x400.jpg",
+    image: "/img/servicio5.jpg",
     
   },
   {
@@ -43,7 +43,7 @@ const servicios = [
     serviceType: "Sesiones",
     serviceTitle: "Curso de Seguridad: Escalada en Punta",
     serviceDescription: "Sube de nivel: aprende a escalar y asegurar en punta de forma segura y técnica.",
-    image: "https://cdn.sanity.io/images/yb9xf4jc/production/e470f77c327e86457795c994350b75f4d484a4d6-600x400.jpg",
+    image: "/img/servicio6.jpg",
     
   },
   
@@ -52,7 +52,7 @@ const servicios = [
     serviceType: "Curso",
     serviceTitle: "Curso Básico de Escalada en Roca",
     serviceDescription: "1 mes / 4 clases, Nivel 1 (12), nivel 2 (12), Aprende a moverte, leer roca, usar equipo y escalar con seguridad.",
-    image: "https://cdn.sanity.io/images/yb9xf4jc/production/e470f77c327e86457795c994350b75f4d484a4d6-600x400.jpg",
+    image: "/img/servicio7.jpg",
     
   },
   {
@@ -60,7 +60,7 @@ const servicios = [
     serviceType: "Curso",
     serviceTitle: "Curso Intermedio de Multilargos",
     serviceDescription: "Lleva tu escalada a nuevas alturas con técnicas para rutas de varios largos. Ideal si ya escalas en punta.",
-    image: "https://cdn.sanity.io/images/yb9xf4jc/production/e470f77c327e86457795c994350b75f4d484a4d6-600x400.jpg",
+    image: "/img/servicio8.jpg",
     
   },
   {
@@ -68,7 +68,7 @@ const servicios = [
     serviceType: "Curso",
     serviceTitle: "Programa ENCANDENA",
     serviceDescription: "Entrena con foco en encadenar rutas. Mentalidad, técnica, descanso, proyección. ¡A romper tus límites!",
-    image: "https://cdn.sanity.io/images/yb9xf4jc/production/e470f77c327e86457795c994350b75f4d484a4d6-600x400.jpg",
+    image: "/img/servicio9.jpg",
     
   },
 ]
