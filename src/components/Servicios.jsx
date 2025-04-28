@@ -113,7 +113,7 @@ function ServicioCard({ duration, serviceType, serviceTitle, serviceDescription,
   function Servicios() {
     return (
       <>
-        <div className='text-white flex flex-col justify-center items-center h-[60vh] bg-[url("/img/hugo-header-servicios.png")] bg-cover bg-center'>
+        <div id='servicios' className='text-white flex flex-col justify-center items-center h-[60vh] bg-[url("/img/hugo-header-servicios.png")] bg-cover bg-center'>
           <h2 className='font-black text-4xl md:text-6xl'>Servicios</h2>
           <p className='w-[85%] md:w-[50%] mt-5 text-justify font-light text-sm md:text-base'>
             Te acompañamos en tu camino como escalador, desde tus primeras clases en rocódromo, hasta escalar rutas reales en montaña. Entrena, aprende y conquista tus metas con nuestra comunidad y coaches especializados.

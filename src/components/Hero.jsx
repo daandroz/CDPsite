@@ -13,13 +13,17 @@ function Hero() {
             Conviértete en la mejor versión de ti mismo mientras desafías la
             gravedad.
           </div>
-          <div className="flex flex-row justify-between gap-2 mt-8 w-full md:w-[30%]">
+          <div className="flex flex-row justify-start gap-2 mt-8 w-full md:w-[30%]">
+          <a className="gap-0"  href="#testimonios">
             <button className="bg-[#4834d4] px-4 py-2  rounded text-white flex-1 animate-pulse">
               Explora ahora
             </button>
+          </a>
+            <a className="gap-0" href="#servicios">
             <button className="bg-[#6d5ddd] px-4 py-2 rounded text-white flex-1">
-              Explora ahora
+              Nuestros paquetes
             </button>
+            </a>
           </div>
         </div>
       </div>

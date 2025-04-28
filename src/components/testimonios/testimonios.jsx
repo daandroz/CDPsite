@@ -141,7 +141,7 @@ const Testimonios = () => {
   }, []);
 
   return (
-    <section className="bg-gray-100 py-16">
+    <section id='testimonios' className="bg-gray-100 py-16">
       <div className="text-center mb-10 px-4">
         <p className="text-indigo-600 font-semibold text-base md:text-lg">“No solo es escalar, es descubrir de lo que eres capaz.”</p>
         <h2 className="text-4xl md:text-6xl font-black mt-2">Historias desde la pared</h2>
