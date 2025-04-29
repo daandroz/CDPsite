@@ -2,10 +2,12 @@ import React from 'react';
 
 function Footer() {
   return (
-    <div className="absolute bottom-0 left-0 w-full text-white text-m px-6 py-3 flex justify-between items-center z-10 bg-black/20 backdrop-blur-sm">
-      <p className="ml-4 font-semibold drop-shadow-md">© 2025 Casa de Piedra</p>
-      <p className="ml-4 font-semibold drop-shadow-md">Mty, N.L. México.</p>
-      <div className="mr-4 flex gap-4 font-semibold drop-shadow-md">
+    <div className="absolute bottom-0 left-0 w-full px-6 py-3 z-10 text-white text-sm 
+                    flex flex-col md:flex-row justify-between items-center
+                    bg-black/40 backdrop-blur-sm">
+      <div className="font-semibold drop-shadow-md mb-1 md:mb-0">© 2025 Casa de Piedra</div>
+      <div className="font-semibold drop-shadow-md mb-1 md:mb-0">Mty, N.L. México.</div>
+      <div className="flex gap-4 font-semibold drop-shadow-md">
         <a
           href="https://facebook.com"
           target="_blank"

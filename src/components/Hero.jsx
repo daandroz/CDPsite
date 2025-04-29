@@ -1,28 +1,28 @@
 import React from "react";
 
-
 function Hero() {
   return (
     <>
       <div className="h-screen bg-[url('/img/huasteca-hero.jpeg')] bg-cover bg-center">
         <div className="hero-wrapper flex flex-col justify-center h-full px-6 md:pl-25">
-          <div className="hero-text text-center md:text-left w-full  md:w-[70%] text-4xl md:text-8xl text-white font-[Inter] font-black mt-10 md:mt-15 animate__fadeInLeft">
+          <div className="hero-text text-center md:text-left w-full md:w-[70%] text-4xl md:text-8xl text-white font-[Inter] font-black mt-10 md:mt-15 animate__fadeInLeft">
             Aprende, crece y desarrolla tus habilidades como escalador
           </div>
           <div className="hero-secondary-text text-center md:text-left text-base md:text-xl text-white font-[Inter] font-normal mt-4 md:mt-1">
-            Conviértete en la mejor versión de ti mismo mientras desafías la
-            gravedad.
+            Conviértete en la mejor versión de ti mismo mientras desafías la gravedad.
           </div>
-          <div className="flex flex-row justify-start gap-2 mt-8 w-full md:w-[30%]">
-          <a className="gap-0"  href="#testimonios">
-            <button className="bg-[#4834d4] px-4 py-2  rounded text-white flex-1 animate-pulse">
-              Explora ahora
-            </button>
-          </a>
-            <a className="gap-0" href="#servicios">
-            <button className="bg-[#6d5ddd] px-4 py-2 rounded text-white flex-1">
-              Nuestros paquetes
-            </button>
+
+          {/* Botones en fila y centrados en todas las pantallas */}
+          <div className="flex flex-row justify-center md:justify-start gap-4 mt-8 w-full">
+            <a href="#testimonios">
+              <button className="bg-[#4834d4] px-6 py-3 rounded text-white text-sm sm:text-base animate-pulse">
+                Explora ahora
+              </button>
+            </a>
+            <a href="#servicios">
+              <button className="bg-[#6d5ddd] px-6 py-3 rounded text-white text-sm sm:text-base">
+                Nuestros paquetes
+              </button>
             </a>
           </div>
         </div>

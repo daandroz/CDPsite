@@ -1,52 +1,58 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+const Navbar = ({ refs, isDarkSection }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full px-0 py-4 flex justify-between items-center  outline outline-1 outline-white fixed top-0 z-100 h-[10vh] backdrop-blur-xs">
-      <div className="text-xl font-black pl-10 md:pl-30 text-white mix-blend-difference">
+    <nav
+      className={`w-full px-6 py-4 flex justify-between items-center fixed top-0 z-50 h-[10vh]
+      backdrop-blur-md bg-black/10 transition-colors duration-300
+      ${isDarkSection ? 'text-black border-black' : 'text-white border-white'}
+      border-b`}
+    >
+      {/* Logo */}
+      <div className="text-3xl font-black pl-2 md:pl-10 mix-blend-difference">
         CASA DE PIEDRA
       </div>
 
-      {/* Menú móvil y desktop */}
-      <ul
-        className={`${
-          isOpen ? "flex h-screen" : "hidden"
-        } flex-col absolute top-full left-0 w-full backdrop-blur bg-black/60 text-white text-4xl items-center gap-6 py-6
-  md:flex md:flex-row md:static md:w-[30%] md:pr-20 md:bg-transparent md:backdrop-blur-0 md:text-base md:gap-6 md:py-6 md:h-auto`}
-      >
+      {/* Links */}
+      <ul className={`${
+  isOpen ? "flex h-screen bg-black/70 backdrop-blur-md" : "hidden"
+} flex-col absolute top-full left-0 w-full text-5xl items-center gap-10 py-10
+  md:flex md:flex-row md:static md:w-auto md:pr-10 
+  md:bg-transparent md:backdrop-blur-0 md:text-lg md:gap-8 md:py-0 md:h-auto`}
+>
         <li>
-          <a href="#inicio" className="hover:text-gray-700 font-extralight">
+          <a href="#nosotros" onClick={() => setIsOpen(false)} className="hover:text-purple-600 font-light">
             Nosotros
           </a>
         </li>
         <li>
-          <a href="#servicios" className="hover:text-gray-700 font-extralight">
-            Servicios
-          </a>
-        </li>
-        <li>
-          <a href="#contacto" className="hover:text-gray-700 font-extralight">
+          <a href="#testimonios" onClick={() => setIsOpen(false)} className="hover:text-purple-600 font-light">
             Testimonios
           </a>
         </li>
         <li>
-          <a href="#contacto" className="hover:text-gray-700 font-extralight">
+          <a href="#servicios" onClick={() => setIsOpen(false)} className="hover:text-purple-600 font-light">
+            Servicios
+          </a>
+        </li>
+        <li>
+          <a href="#contacto" onClick={() => setIsOpen(false)} className="hover:text-purple-600 font-light">
             Contacto
           </a>
         </li>
       </ul>
 
-      {/* Botón hamburguesa solo en mobile */}
+      {/* Botón hamburguesa */}
       <button
-        className="md:hidden text-white text-xl focus:outline-none z-50"
+        className="md:hidden text-5xl focus:outline-none z-50 pr-4"
         onClick={() => setIsOpen(!isOpen)}
       >
         ☰
       </button>
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

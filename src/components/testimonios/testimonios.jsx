@@ -117,7 +117,7 @@ const formasHover = [
   "rounded-[50%_50%_30%_70%/70%_30%_50%_50%]",
 ];
 
-const Testimonios = () => {
+const Testimonios = ({ testimoniosRef }) => {
   const scrollRef = useRef(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -141,11 +141,15 @@ const Testimonios = () => {
   }, []);
 
   return (
-    <section id='testimonios' className="bg-gray-100 py-16">
+    <section id='testimonios' ref={testimoniosRef} className="bg-gray-100 py-16">
       <div className="text-center mb-10 px-4">
-        <p className="text-indigo-600 font-semibold text-base md:text-lg">“No solo es escalar, es descubrir de lo que eres capaz.”</p>
+        <p className="text-indigo-600 font-semibold text-base md:text-lg">
+          “No solo es escalar, es descubrir de lo que eres capaz.”
+        </p>
         <h2 className="text-4xl md:text-6xl font-black mt-2">Historias desde la pared</h2>
-        <p className="mt-4 text-gray-600 text-lg">Cada ruta es una historia. Cada historia, una transformación.</p>
+        <p className="mt-4 text-gray-600 text-lg">
+          Cada ruta es una historia. Cada historia, una transformación.
+        </p>
       </div>
 
       <div className="overflow-x-scroll overflow-y-hidden scrollbar-hide" ref={scrollRef}>
@@ -155,6 +159,7 @@ const Testimonios = () => {
               const formaBase = formas[index % formas.length];
               const formaHover = formasHover[index % formasHover.length];
               const isHovered = hoveredIndex === `${repeatIndex}-${index}`;
+
               return item.tipo === 'texto' ? (
                 <div
                   key={`text-${repeatIndex}-${index}`}

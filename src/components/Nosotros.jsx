@@ -1,11 +1,12 @@
-import React from 'react'
-
+import React, { useRef } from 'react';
 
 function Nosotros() {
+  const nosotrosRef = useRef(null);
+
   return (
     <>
       <div className="nosotros-first-section h-[70vh] bg-[#78b9ca] flex flex-col justify-center items-center relative">
-        <div className="text-white text-3xl md:text-7xl w-[65%] md:w-[55%] font-[Inter] font-black text-center m-10">
+        <div ref={nosotrosRef} id="nosotros" className="text-white text-3xl md:text-7xl w-[65%] md:w-[55%] font-[Inter] font-black text-center m-10">
           Transformar a través del cuerpo, la mente y la montaña
         </div>
         <div className="text-white md:text-normal w-[70%] md:w-[50%] font-[Inter] text-justify">
@@ -44,4 +45,4 @@ function Nosotros() {
   );
 }
 
-export default Nosotros
+export default Nosotros;
