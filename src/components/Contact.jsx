@@ -4,7 +4,7 @@ import { db } from "../firebase";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import emailjs from '@emailjs/browser';
-import Footer from './Footer';
+import Footer from './footer';
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;

@@ -9,7 +9,7 @@ function Footer() {
       <div className="font-semibold drop-shadow-md mb-1 md:mb-0">Mty, N.L. México.</div>
       <div className="flex gap-4 font-semibold drop-shadow-md">
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com/escalarenmonterrey/?locale=es_LA"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-[#817cff] transition"
@@ -17,7 +17,7 @@ function Footer() {
           Facebook
         </a>
         <a
-          href="https://wa.me/5215555555555"
+          href="https://wa.me/+528115310535"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-[#7bed9f] transition"
