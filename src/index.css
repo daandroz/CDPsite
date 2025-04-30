@@ -10,3 +10,11 @@
   html {
     scroll-behavior: smooth;
   }
+  
+
+  @media (min-width: 700px) and (max-width: 1000px) {
+    .hero-section .hero-text {
+      font-size: 4rem; 
+      line-height: 1.1;
+    }
+  }
