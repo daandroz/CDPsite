@@ -32,17 +32,17 @@ function Hero() {
           </div>
 
           <div className="flex flex-row justify-center md:justify-start gap-4 mt-8 w-full">
-            <a href="#testimonios">
-              <button className="bg-[#4834d4] px-6 py-3 rounded text-white text-sm sm:text-base animate-pulse">
-                Explora ahora
-              </button>
-            </a>
-            <a href="#servicios">
-              <button className="bg-[#6d5ddd] px-6 py-3 rounded text-white text-sm sm:text-base">
-                Nuestros paquetes
-              </button>
-            </a>
-          </div>
+  <a href="#testimonios">
+    <button className="bg-[#4834d4] w-52 px-6 py-3 rounded text-white text-sm sm:text-base animate-pulse text-center whitespace-nowrap">
+      Explora ahora
+    </button>
+  </a>
+  <a href="#servicios">
+    <button className="bg-[#6d5ddd] w-52 px-6 py-3 rounded text-white text-sm sm:text-base text-center whitespace-nowrap">
+      Nuestros paquetes
+    </button>
+  </a>
+</div>
         </div>
       </div>
     </>
