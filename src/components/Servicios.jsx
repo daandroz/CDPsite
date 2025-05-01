@@ -12,11 +12,11 @@ function ServicioCard({ duration, serviceType, serviceTitle, serviceDescription,
       />
       <div className="text-gray-400 text-sm md:text-base flex justify-between mt-2">
         <div className="flex items-center">
-          <img className="inline-block w-5 mr-2" src="/img/calendar-icon.png" alt="duración" />
+          <img className="inline-block w-5 mr-2" src="/CDPsite/img/calendar-icon.png" alt="duración" />
           {duration}
         </div>
         <div className="flex items-center">
-          <img className="inline-block w-5 mr-2" src="/img/open-folder.png" alt="tipo" />
+          <img className="inline-block w-5 mr-2" src="/CDPsite/img/open-folder.png" alt="tipo" />
           {serviceType}
         </div>
       </div>
@@ -30,7 +30,7 @@ function ServicioCard({ duration, serviceType, serviceTitle, serviceDescription,
         rel="noopener noreferrer"
         className="text-green-600 font-semibold text-sm md:text-base mt-auto flex items-center"
       >
-        <img className="inline-block w-6 mr-2" src="/img/green-arrow-icon.png" alt="ver más" />
+        <img className="inline-block w-6 mr-2" src="/CDPsite/img/green-arrow-icon.png" alt="ver más" />
         Descubre más
       </a>
     </div>
@@ -44,63 +44,63 @@ function Servicios() {
       serviceType: "Documento",
       serviceTitle: "Planificación Personal de Entrenamiento",
       serviceDescription: "Diagnóstico y diseño de tu programa de entrenamiento para escalar",
-      image: "/img/servicio1.jpg",
+      image: "/CDPsite/img/servicio1.jpg",
     },
     {
       duration: "1 día",
       serviceType: "Sesión",
       serviceTitle: "Sesiones de Entrenamiento Personal",
       serviceDescription: "Una hora enfocada 100% en ti. Técnica, fuerza o táctica, tú eliges la prioridad.",
-      image: "/img/servicio2.jpg",
+      image: "/CDPsite/img/servicio2.jpg",
     },
     {
       duration: "8 horas al mes",
       serviceType: "Curso",
       serviceTitle: "Entrenamiento Grupal en Rocódromo",
       serviceDescription: "Entrena en grupo con acompañamiento profesional y una comunidad que empuja contigo.",
-      image: "/img/servicio3.jpg",
+      image: "/CDPsite/img/servicio3.jpg",
     },
     {
       duration: "3 días",
       serviceType: "Curso",
       serviceTitle: "Autogestión del Entrenamiento en Escalada",
       serviceDescription: "Curso completo para que diseñes y gestiones tu propio entrenamiento, ideal si ya tienes experiencia.",
-      image: "/img/servicio4.jpg",
+      image: "/CDPsite/img/servicio4.jpg",
     },
     {
       duration: "2 sesiones",
       serviceType: "Sesiones",
       serviceTitle: "Curso de Seguridad: Escalada en YoYo",
       serviceDescription: "Aprende a asegurar y escalar con seguridad en modalidad top rope (yo-yo).",
-      image: "/img/servicio5.jpg",
+      image: "/CDPsite/img/servicio5.jpg",
     },
     {
       duration: "4 sesiones",
       serviceType: "Sesiones",
       serviceTitle: "Curso de Seguridad: Escalada en Punta",
       serviceDescription: "Sube de nivel: aprende a escalar y asegurar en punta de forma segura y técnica.",
-      image: "/img/servicio6.jpg",
+      image: "/CDPsite/img/servicio6.jpg",
     },
     {
       duration: "Indefinido",
       serviceType: "Curso",
       serviceTitle: "Curso Básico de Escalada en Roca",
       serviceDescription: "1 mes / 4 clases, Nivel 1 (12), nivel 2 (12), Aprende a moverte, leer roca, usar equipo y escalar con seguridad.",
-      image: "/img/servicio7.jpg",
+      image: "/CDPsite/img/servicio7.jpg",
     },
     {
       duration: "Indefinido",
       serviceType: "Curso",
       serviceTitle: "Curso Intermedio de Multilargos",
       serviceDescription: "Lleva tu escalada a nuevas alturas con técnicas para rutas de varios largos. Ideal si ya escalas en punta.",
-      image: "/img/servicio8.jpg",
+      image: "/CDPsite/img/servicio8.jpg",
     },
     {
       duration: "12 sesiones",
       serviceType: "Curso",
       serviceTitle: "Programa ENCANDENA",
       serviceDescription: "Entrena con foco en encadenar rutas. Mentalidad, técnica, descanso, proyección. ¡A romper tus límites!",
-      image: "/img/servicio9.jpg",
+      image: "/CDPsite/img/servicio9.jpg",
     },
   ];
 

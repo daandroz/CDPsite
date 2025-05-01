@@ -3,12 +3,12 @@ import { useEffect, useRef, useState } from 'react';
 const testimonios = [
   {
     texto: 'Llegué sin saber usar un arnés y ahora encadené mi primera ruta en roca. Se siente increíble crecer así.',
-    autor: 'Dani, 32 años',
+    autor: 'Dani, 28 años',
     tipo: 'texto',
     fondo: 'bg-sky-200',
     forma: 'rounded-3xl',
   },
-  { src: '/img/testimonio1.png', tipo: 'imagen', forma: 'rounded-full' },
+  { src: '/CDPsite/img/testimonio1.png', tipo: 'imagen', forma: 'rounded-full' },
   {
     texto: 'Creí que era solo un deporte, pero terminó siendo parte de mi vida.',
     autor: 'Hugo, 24 años',
@@ -16,7 +16,7 @@ const testimonios = [
     fondo: 'bg-lime-300',
     forma: 'rounded-tl-[80px] rounded-br-[30px]',
   },
-  { src: '/img/testimonio2.png', tipo: 'imagen', forma: 'rounded-2xl' },
+  { src: '/CDPsite/img/testimonio2.png', tipo: 'imagen', forma: 'rounded-2xl' },
   {
     texto: 'Desde que llegué me sentí escuchada. Cada sesión me ayudó a conectar conmigo misma de una manera que jamás había experimentado.',
     autor: 'Anneth, 23 años',
@@ -24,7 +24,7 @@ const testimonios = [
     fondo: 'bg-pink-300',
     forma: 'rounded-b-[60px] rounded-t-[20px]',
   },
-  { src: '/img/testimonio3.jpg', tipo: 'imagen', forma: 'rounded-full' },
+  { src: '/CDPsite/img/testimonio3.jpg', tipo: 'imagen', forma: 'rounded-full' },
   {
     texto: 'Al principio dudaba, pero me sorprendió la manera tan humana y cercana en la que trabajan. Realmente sales transformado de cada encuentro.',
     autor: 'Luis, 31 años',
@@ -32,7 +32,7 @@ const testimonios = [
     fondo: 'bg-sky-200',
     forma: 'rounded-3xl',
   },
-  { src: '/img/testimonio4.jpg', tipo: 'imagen', forma: 'rounded-2xl' },
+  { src: '/CDPsite/img/testimonio4.jpg', tipo: 'imagen', forma: 'rounded-2xl' },
   {
     texto: 'No solo me enseñaron a escalar, sino que también me ayudaron a fortalecer mi mente.',
     autor: 'Jorge, 25 años',
@@ -40,15 +40,15 @@ const testimonios = [
     fondo: 'bg-lime-300',
     forma: 'rounded-tl-[40px] rounded-br-[70px]',
   },
-  { src: '/img/testimonio5.jpg', tipo: 'imagen', forma: 'rounded-full' },
+  { src: '/CDPsite/img/testimonio5.jpg', tipo: 'imagen', forma: 'rounded-full' },
   {
     texto: 'Nunca es tarde para empezar de nuevo. Gracias a ustedes recuperé partes de mí que pensaba que ya había perdido para siempre.',
-    autor: 'Denni, 60 años',
+    autor: 'Dennis, 60 años',
     tipo: 'texto',
     fondo: 'bg-pink-300',
     forma: 'rounded-3xl',
   },
-  { src: '/img/testimonio6.jpg', tipo: 'imagen', forma: 'rounded-2xl' },
+  { src: '/CDPsite/img/testimonio6.jpg', tipo: 'imagen', forma: 'rounded-2xl' },
   {
     texto: 'Encontré un espacio donde pude ser yo mismo, sin miedo al juicio. Me ayudaron a confiar más en mí y en mi camino.',
     autor: 'David, 18 años',
@@ -56,7 +56,7 @@ const testimonios = [
     fondo: 'bg-sky-200',
     forma: 'rounded-t-[80px] rounded-b-[20px]',
   },
-  { src: '/img/testimonio7.jpg', tipo: 'imagen', forma: 'rounded-full' },
+  { src: '/CDPsite/img/testimonio7.jpg', tipo: 'imagen', forma: 'rounded-full' },
   {
     texto: 'Aquí aprendí que no hay edad para buscar ayuda. Me escucharon con el corazón y me dieron herramientas que me sirven día a día.',
     autor: 'Dante, 19 años',
@@ -64,15 +64,15 @@ const testimonios = [
     fondo: 'bg-lime-300',
     forma: 'rounded-2xl',
   },
-  { src: '/img/testimonio8.jpg', tipo: 'imagen', forma: 'rounded-3xl' },
+  { src: '/CDPsite/img/testimonio8.jpg', tipo: 'imagen', forma: 'rounded-3xl' },
   {
     texto: 'Salí renovado. Cada palabra, cada momento compartido, hizo una diferencia real en mi forma de ver la vida.',
-    autor: 'Guido, 25 años',
+    autor: 'Guido, 28 años',
     tipo: 'texto',
     fondo: 'bg-pink-300',
     forma: 'rounded-b-[80px] rounded-t-[20px]',
   },
-  { src: '/img/testimonio9.jpg', tipo: 'imagen', forma: 'rounded-2xl' },
+  { src: '/CDPsite/img/testimonio9.jpg', tipo: 'imagen', forma: 'rounded-2xl' },
   {
     texto: 'No imaginaba lo mucho que podía avanzar en tan poco tiempo. Me llevo herramientas valiosas para mi vida personal y profesional.',
     autor: 'Edgar, 29 años',
@@ -80,7 +80,7 @@ const testimonios = [
     fondo: 'bg-sky-200',
     forma: 'rounded-3xl',
   },
-  { src: '/img/testimonio10.jpg', tipo: 'imagen', forma: 'rounded-full' },
+  { src: '/CDPsite/img/testimonio10.jpg', tipo: 'imagen', forma: 'rounded-full' },
   {
     texto: 'Cada sesión fue un paso más hacia una mejor versión de mí. Estoy profundamente agradecida por el acompañamiento recibido aquí.',
     autor: 'Ary, 28 años',
@@ -88,7 +88,7 @@ const testimonios = [
     fondo: 'bg-lime-300',
     forma: 'rounded-2xl',
   },
-  { src: '/img/testimonio11.jpg', tipo: 'imagen', forma: 'rounded-3xl' },
+  { src: '/CDPsite/img/testimonio11.jpg', tipo: 'imagen', forma: 'rounded-3xl' },
 ];
 
 const formas = [
