@@ -40,7 +40,7 @@ const testimonios = [
     fondo: 'bg-lime-300',
     forma: 'rounded-tl-[40px] rounded-br-[70px]',
   },
-  { src: '/CDPsite/img/testimonio5.jpg', tipo: 'imagen', forma: 'rounded-full' },
+  { src: '/CDPsite/img/testimonio5.jpeg', tipo: 'imagen', forma: 'rounded-full' },
   {
     texto: 'Nunca es tarde para empezar de nuevo. Gracias a ustedes recuperé partes de mí que pensaba que ya había perdido para siempre.',
     autor: 'Dennis, 60 años',

@@ -72,7 +72,7 @@ function Servicios() {
       serviceType: "Sesiones",
       serviceTitle: "Curso de Seguridad: Escalada en YoYo",
       serviceDescription: "Aprende a asegurar y escalar con seguridad en modalidad top rope (yo-yo).",
-      image: "/CDPsite/img/servicio5.jpg",
+      image: "/CDPsite/img/servicio5.jpeg",
     },
     {
       duration: "4 sesiones",
