@@ -30,7 +30,7 @@ function ServicioCard({ duration, serviceType, serviceTitle, serviceDescription,
         rel="noopener noreferrer"
         className="text-green-600 font-semibold text-sm md:text-base mt-auto flex items-center"
       >
-        <img className="inline-block w-6 mr-2" src="/CDPsite/img/green-arrow-icon.png" alt="ver más" />
+        <img className="inline-block w-6 mr-2" src="/CDPsite/img/green-arrow-icon.webp" alt="ver más" />
         Descubre más
       </a>
     </div>
@@ -44,28 +44,28 @@ function Servicios() {
       serviceType: "Documento",
       serviceTitle: "Planificación Personal de Entrenamiento",
       serviceDescription: "Diagnóstico y diseño de tu programa de entrenamiento para escalar",
-      image: "/CDPsite/img/servicio1.jpg",
+      image: "/CDPsite/img/servicio1.webp",
     },
     {
       duration: "1 día",
       serviceType: "Sesión",
       serviceTitle: "Sesiones de Entrenamiento Personal",
       serviceDescription: "Una hora enfocada 100% en ti. Técnica, fuerza o táctica, tú eliges la prioridad.",
-      image: "/CDPsite/img/servicio2.jpg",
+      image: "/CDPsite/img/servicio2.webp",
     },
     {
       duration: "8 horas al mes",
       serviceType: "Curso",
       serviceTitle: "Entrenamiento Grupal en Rocódromo",
       serviceDescription: "Entrena en grupo con acompañamiento profesional y una comunidad que empuja contigo.",
-      image: "/CDPsite/img/servicio3.jpg",
+      image: "/CDPsite/img/servicio3.webp",
     },
     {
       duration: "3 días",
       serviceType: "Curso",
       serviceTitle: "Autogestión del Entrenamiento en Escalada",
       serviceDescription: "Curso completo para que diseñes y gestiones tu propio entrenamiento, ideal si ya tienes experiencia.",
-      image: "/CDPsite/img/servicio4.jpg",
+      image: "/CDPsite/img/servicio4.webp",
     },
     {
       duration: "2 sesiones",
@@ -79,35 +79,35 @@ function Servicios() {
       serviceType: "Sesiones",
       serviceTitle: "Curso de Seguridad: Escalada en Punta",
       serviceDescription: "Sube de nivel: aprende a escalar y asegurar en punta de forma segura y técnica.",
-      image: "/CDPsite/img/servicio6.jpg",
+      image: "/CDPsite/img/servicio6.webp",
     },
     {
       duration: "Indefinido",
       serviceType: "Curso",
       serviceTitle: "Curso Básico de Escalada en Roca",
       serviceDescription: "1 mes / 4 clases, Nivel 1 (12), nivel 2 (12), Aprende a moverte, leer roca, usar equipo y escalar con seguridad.",
-      image: "/CDPsite/img/servicio7.jpg",
+      image: "/CDPsite/img/servicio7.webp",
     },
     {
       duration: "Indefinido",
       serviceType: "Curso",
       serviceTitle: "Curso Intermedio de Multilargos",
       serviceDescription: "Lleva tu escalada a nuevas alturas con técnicas para rutas de varios largos. Ideal si ya escalas en punta.",
-      image: "/CDPsite/img/servicio8.jpg",
+      image: "/CDPsite/img/servicio8.webp",
     },
     {
       duration: "12 sesiones",
       serviceType: "Curso",
       serviceTitle: "Programa ENCANDENA",
       serviceDescription: "Entrena con foco en encadenar rutas. Mentalidad, técnica, descanso, proyección. ¡A romper tus límites!",
-      image: "/CDPsite/img/servicio9.jpg",
+      image: "/CDPsite/img/servicio9.webp",
     },
   ];
 
   return (
     <>
       <div
-        className='text-white flex flex-col justify-center items-center h-[60vh] bg-[url("/img/hugo-header-servicios.png")] bg-cover bg-center'
+        className='text-white flex flex-col justify-center items-center h-[60vh] bg-[url("/img/hugo-header-servicios.webp")] bg-cover bg-center'
       >
         <h2 className='font-black text-4xl md:text-6xl'>Servicios</h2>
         <p className='w-[85%] md:w-[50%] mt-5 text-justify font-light text-sm md:text-base'>

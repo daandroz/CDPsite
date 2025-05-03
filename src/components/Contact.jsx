@@ -193,10 +193,10 @@ Notas: ${notas || "Ninguna"}`;
           </div>
         </div>
 
-        <div className="hidden md:block w-1/2 bg-[url('/img/contact-bg.png')] bg-cover bg-center" />
+        <div className="hidden md:block w-1/2 bg-[url('/img/contact-bg.webp')] bg-cover bg-center" />
       </div>
 
-      <div className="block md:hidden w-full h-60 bg-[url('/img/contact-bg.png')] bg-cover bg-center" />
+      <div className="block md:hidden w-full h-60 bg-[url('/img/contact-bg.webp')] bg-cover bg-center" />
 
       <div className="mt-auto">
         <Footer />

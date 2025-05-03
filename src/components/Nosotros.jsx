@@ -46,11 +46,11 @@ function Nosotros() {
           que promueven el aprendizaje vivencial y el desarrollo humano.
         </p>
         <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-35px] flex justify-center items-center">
-          <div className="w-[70px] h-[70px] bg-[url('/img/arrow.png')] bg-contain bg-no-repeat animate-bounce"></div>
+          <div className="w-[70px] h-[70px] bg-[url('/img/arrow.webp')] bg-contain bg-no-repeat animate-bounce"></div>
         </div>
       </section>
 
-      <section className="nosotros-second-section h-[70vh] md:h-[50vh] flex flex-col md:flex-row text-white bg-[url('/img/montana-quienesomos.png')] bg-cover bg-center">
+      <section className="nosotros-second-section h-[70vh] md:h-[50vh] flex flex-col md:flex-row text-white bg-[url('/img/montana-quienesomos.webp')] bg-cover bg-center">
         <div className="h-[100%] md:w-[50vw]"></div>
 
         <div className="w-full md:w-[50vw] bg-[#4834d4] md:bg-[#5447b4]/90 flex flex-col justify-center items-center">
