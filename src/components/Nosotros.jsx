@@ -77,7 +77,7 @@ function Nosotros() {
       >
         <video
           ref={videoElementRef}
-          src={isMobile ? "/CDPsite/img/cdpsite-mobile.mov" : "/CDPsite/img/cdpsite-v1.mov"}
+          src={isMobile ? "/CDPsite/img/cdpsite-mobile.mp4" : "/CDPsite/img/cdpsite-dekstop.mp4"}
           className={`h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
             isVideoVisible ? "opacity-100" : "opacity-0"
           }`}
