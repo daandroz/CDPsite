@@ -12,11 +12,11 @@ function ServicioCard({ duration, serviceType, serviceTitle, serviceDescription,
       />
       <div className="text-gray-400 text-sm md:text-base flex justify-between mt-2">
         <div className="flex items-center">
-          <img className="inline-block w-5 mr-2" src="/CDPsite/img/calendar-icon.png" alt="duración" />
+          <img className="inline-block w-5 mr-2" src="img/calendar-icon.png" alt="duración" />
           {duration}
         </div>
         <div className="flex items-center">
-          <img className="inline-block w-5 mr-2" src="/CDPsite/img/open-folder.png" alt="tipo" />
+          <img className="inline-block w-5 mr-2" src="img/open-folder.png" alt="tipo" />
           {serviceType}
         </div>
       </div>
@@ -30,7 +30,7 @@ function ServicioCard({ duration, serviceType, serviceTitle, serviceDescription,
         rel="noopener noreferrer"
         className="text-green-600 font-semibold text-sm md:text-base mt-auto flex items-center"
       >
-        <img className="inline-block w-6 mr-2" src="/CDPsite/img/green-arrow-icon.webp" alt="ver más" />
+        <img className="inline-block w-6 mr-2" src="img/green-arrow-icon.webp" alt="ver más" />
         Descubre más
       </a>
     </div>
