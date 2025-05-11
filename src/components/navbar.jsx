@@ -17,7 +17,7 @@ const Navbar = ({ refs, isDarkSection }) => {
       >
         {/* Logo */}
         <div className="text-3xl font-black pl-2 md:pl-10 mix-blend-difference">
-          CASA DE PIEDRA
+          LA CASA DE PIEDRA
         </div>
 
         {/* Links (desktop only) */}
