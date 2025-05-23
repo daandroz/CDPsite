@@ -175,16 +175,16 @@ Notas: ${notas || "Ninguna"}`;
 
               <div className="flex flex-col md:flex-row justify-end gap-3 mt-4">
                 <button
-                  type="submit"
+                  type="button"
                   onClick={(e) => handleSubmit(e, true)}
-                  className="bg-[#817cff] text-white font-extralight text-sm px-4 py-2 rounded"
+                  className="bg-[#817cff] text-white font-extralight text-sm px-4 py-2 rounded cursor-pointer touch-manipulation"
                 >
                   Enviar WhatsApp
                 </button>
                 <button
-                  type="submit"
+                  type="button"
                   onClick={(e) => handleSubmit(e, false)}
-                  className="bg-[#7bed9f] text-black font-extralight text-sm px-4 py-2 rounded"
+                  className="bg-[#7bed9f] text-black font-extralight text-sm px-4 py-2 rounded cursor-pointer touch-manipulation"
                 >
                   Enviar Email
                 </button>
