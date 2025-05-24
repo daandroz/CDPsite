@@ -80,7 +80,7 @@ Notas: ${notas || "Ninguna"}`;
 
     const { nombre, email, programa } = formData;
 
-    // Validación solo si es envío por email
+    // Validación si se va a enviar por Email
     if (!viaWhatsapp && (!nombre || !email || !programa)) {
       MySwal.fire({
         icon: 'warning',
@@ -117,15 +117,15 @@ Notas: ${notas || "Ninguna"}`;
 
   return (
     <div id="contacto" className="relative flex flex-col min-h-screen bg-white">
-      
+
       <div className="flex flex-col md:flex-row flex-1">
-        
+
         <div className="w-full md:w-1/2 bg-[#4834d4] text-white flex items-center justify-center px-6 py-12">
           <div className="max-w-md w-full">
             <h2 className="font-extralight">Pláticanos tus necesidades.</h2>
             <h1 className="text-4xl mb-8 font-bold">Contáctanos</h1>
 
-            <form className="flex flex-col gap-4">
+            <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
               <label className="font-extralight">
                 Nombre
                 <input
@@ -133,6 +133,7 @@ Notas: ${notas || "Ninguna"}`;
                   value={formData.nombre}
                   onChange={handleChange}
                   className="w-full mt-1 p-2 bg-gray-300 text-black rounded text-sm"
+                  placeholder="Tu nombre"
                 />
               </label>
 
@@ -144,6 +145,7 @@ Notas: ${notas || "Ninguna"}`;
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full mt-1 p-2 bg-gray-300 text-black rounded text-sm"
+                  placeholder="tucorreo@email.com"
                 />
               </label>
 
@@ -170,6 +172,7 @@ Notas: ${notas || "Ninguna"}`;
                   value={formData.notas}
                   onChange={handleChange}
                   className="w-full mt-1 p-2 bg-gray-300 text-black rounded text-sm"
+                  placeholder="Escribe aquí tus dudas o comentarios"
                 />
               </label>
 
