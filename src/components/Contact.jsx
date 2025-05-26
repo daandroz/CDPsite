@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "../firebase";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import emailjs from '@emailjs/browser';
@@ -76,7 +74,7 @@ Notas: ${notas || "Ninguna"}`;
     });
   };
 
-  const handleSubmit = async (e, viaWhatsapp = true) => {
+  const handleSubmit = (e, viaWhatsapp = true) => {
     e.preventDefault();
 
     const { nombre, email, programa } = formData;
@@ -93,26 +91,13 @@ Notas: ${notas || "Ninguna"}`;
       return;
     }
 
-    try {
-      await addDoc(collection(db, "clientes"), formData);
-
-      if (viaWhatsapp) {
-        window.open(whatsappLink(), "_blank");
-      } else {
-        sendEmail();
-      }
-
-      setFormData({ nombre: '', email: '', programa: '', notas: '' });
-    } catch (err) {
-      MySwal.fire({
-        icon: 'error',
-        title: 'Error al enviar',
-        text: 'No pudimos enviar tu mensaje. Intenta de nuevo más tarde.',
-        confirmButtonColor: '#817cff',
-        background: '#fdf1f1',
-        customClass: { popup: 'rounded-lg shadow-xl' }
-      });
+    if (viaWhatsapp) {
+      window.open(whatsappLink(), "_blank");
+    } else {
+      sendEmail();
     }
+
+    setFormData({ nombre: '', email: '', programa: '', notas: '' });
   };
 
   return (
