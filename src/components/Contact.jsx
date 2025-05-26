@@ -6,9 +6,10 @@ import withReactContent from 'sweetalert2-react-content';
 import emailjs from '@emailjs/browser';
 import Footer from './footer';
 
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+// Claves pegadas directamente en código para que funcione en GitHub Pages
+const SERVICE_ID = "service_9ypzsdp";
+const TEMPLATE_ID = "template_lrlua6t";
+const PUBLIC_KEY = "JTkgeHf5iUW7v_C28";
 
 const MySwal = withReactContent(Swal);
 
@@ -80,7 +81,6 @@ Notas: ${notas || "Ninguna"}`;
 
     const { nombre, email, programa } = formData;
 
-    // Validación si se va a enviar por Email
     if (!viaWhatsapp && (!nombre || !email || !programa)) {
       MySwal.fire({
         icon: 'warning',
@@ -117,9 +117,7 @@ Notas: ${notas || "Ninguna"}`;
 
   return (
     <div id="contacto" className="relative flex flex-col min-h-screen bg-white">
-
       <div className="flex flex-col md:flex-row flex-1">
-
         <div className="w-full md:w-1/2 bg-[#4834d4] text-white flex items-center justify-center px-6 py-12">
           <div className="max-w-md w-full">
             <h2 className="font-extralight">Pláticanos tus necesidades.</h2>
