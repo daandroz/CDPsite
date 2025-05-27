@@ -1,6 +1,6 @@
 // App.jsx
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import Hero from "./components/Hero";
 import Nosotros from "./components/Nosotros";
 import Servicios from "./components/Servicios";

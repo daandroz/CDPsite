@@ -26,10 +26,10 @@ function Hero() {
           property="og:description"
           content="Desarrolla tus habilidades como escalador en montaña y crece en un entorno natural con nuestros programas personalizados."
         />
-        <meta property="og:image" content="/img/huasteca-hero.jpeg" />
+        <meta property="og:image" content="/img/huasteca-hero.webp" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://escaladaconsciente.mx" />
-        <meta name="keywords" content="escalada, Monterrey, cursos de escalada, escalada deportiva, coaching de escalada, naturaleza, crecimiento personal" />
+        <meta property="og:url" content="https://lacasadepiedra.mx" />
+        <meta name="keywords" content="escalada, Monterrey, cursos de escalada, escalada deportiva, coaching de escalada, naturaleza, crecimiento personal, climbing, lead climb, cursos y programas de escalada Monterrey" />
       </Helmet>
 
       <div className="hero-section h-screen bg-[url('/img/huasteca-hero.webp')] bg-cover bg-center overflow-x-hidden">

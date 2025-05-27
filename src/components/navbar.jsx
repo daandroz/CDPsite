@@ -19,6 +19,7 @@ const Navbar = ({ refs, isDarkSection }) => {
         border-b`}
       >
         {/* Logo */}
+        <a href="#hero">
         <div className="pl-2 md:pl-10 flex items-center">
           {/* Imagen solo en mobile */}
           <img
@@ -31,6 +32,7 @@ const Navbar = ({ refs, isDarkSection }) => {
             LA CASA DE PIEDRA
           </div>
         </div>
+        </a>
 
         {/* Links (desktop only) */}
         <ul className="hidden md:flex md:flex-row md:items-center md:gap-8 md:pr-10 md:text-lg">
