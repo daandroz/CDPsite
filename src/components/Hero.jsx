@@ -3,14 +3,21 @@ import { Helmet } from "react-helmet-async";
 
 function Hero() {
   const [isVisible, setIsVisible] = useState(false);
+  const [bgLoaded, setBgLoaded] = useState(false);
 
   useEffect(() => {
-    // Espera un pequeño tiempo para forzar el render y que se note la transición
     const timeout = setTimeout(() => {
       setIsVisible(true);
-    }, 100); // puedes ajustar el tiempo si lo deseas
-
+    }, 100);
     return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/img/huasteca-hero.webp";
+    img.onload = () => {
+      setBgLoaded(true);
+    };
   }, []);
 
   return (
@@ -32,8 +39,29 @@ function Hero() {
         <meta name="keywords" content="escalada, Monterrey, cursos de escalada, escalada deportiva, coaching de escalada, naturaleza, crecimiento personal, climbing, lead climb, cursos y programas de escalada Monterrey" />
       </Helmet>
 
-      <div className="hero-section h-screen bg-[url('/img/huasteca-hero.webp')] bg-cover bg-center overflow-x-hidden">
-        <div className="hero-wrapper flex flex-col justify-center h-full px-6 md:pl-25">
+      <div className="hero-section h-screen overflow-x-hidden relative">
+        {/* Imagen baja calidad (preload) */}
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out"
+          style={{
+            backgroundImage: "url('/img/huasteca-hero-lazy.jpg')",
+            opacity: bgLoaded ? 0 : 1,
+            zIndex: 0,
+          }}
+        />
+
+        {/* Imagen alta calidad (carga después) */}
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+          style={{
+            backgroundImage: "url('/img/huasteca-hero.webp')",
+            opacity: bgLoaded ? 1 : 0,
+            zIndex: 0,
+          }}
+        />
+
+        {/* Contenido encima */}
+        <div className="hero-wrapper relative z-10 flex flex-col justify-center h-full px-6 md:pl-25">
           <div
             className={`hero-text text-center md:text-left w-full md:w-[70%] text-4xl md:text-8xl text-white font-[Inter] font-black mt-10 md:mt-15 transition-all duration-1000 ease-[cubic-bezier(0.33,_1,_0.68,_1)] transform ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
