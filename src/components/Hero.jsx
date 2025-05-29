@@ -2,23 +2,23 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 function Hero() {
-  const [isVisible, setIsVisible] = useState(false);
   const [bgLoaded, setBgLoaded] = useState(false);
+  const [useHeavyImage, setUseHeavyImage] = useState(true);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible(true);
-    }, 100);
-    return () => clearTimeout(timeout);
-  }, []);
+    // Detecta tipo de red y decide si cargar imagen pesada
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const slowTypes = ["slow-2g", "2g", "3g"];
+    if (connection && slowTypes.includes(connection.effectiveType)) {
+      setUseHeavyImage(false); // no cargar fondo pesado
+    }
 
-  useEffect(() => {
     const img = new Image();
-    img.src = "/img/huasteca-hero.webp";
+    img.src = useHeavyImage ? "/img/huasteca-hero.webp" : "/img/huasteca-hero-light.jpg";
     img.onload = () => {
       setBgLoaded(true);
     };
-  }, []);
+  }, [useHeavyImage]);
 
   return (
     <>
@@ -37,42 +37,52 @@ function Hero() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://lacasadepiedra.mx" />
         <meta name="keywords" content="escalada, Monterrey, cursos de escalada, escalada deportiva, coaching de escalada, naturaleza, crecimiento personal, climbing, lead climb, cursos y programas de escalada Monterrey" />
+
+        {/* Preload solo si se va a usar la imagen pesada */}
+        {useHeavyImage && (
+          <link rel="preload" as="image" href="/img/huasteca-hero.webp" />
+        )}
       </Helmet>
 
       <div className="hero-section h-screen overflow-x-hidden relative">
-        {/* Imagen baja calidad (preload) */}
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out"
-          style={{
-            backgroundImage: "url('/img/huasteca-hero-lazy.jpg')",
-            opacity: bgLoaded ? 0 : 1,
-            zIndex: 0,
-          }}
-        />
-
-        {/* Imagen alta calidad (carga después) */}
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
-          style={{
-            backgroundImage: "url('/img/huasteca-hero.webp')",
-            opacity: bgLoaded ? 1 : 0,
-            zIndex: 0,
-          }}
-        />
-
-        {/* Contenido encima */}
-        <div className="hero-wrapper relative z-10 flex flex-col justify-center h-full px-6 md:pl-25">
-          <div
-            className={`hero-text text-center md:text-left w-full md:w-[70%] text-4xl md:text-8xl text-white font-[Inter] font-black mt-10 md:mt-15 transition-all duration-1000 ease-[cubic-bezier(0.33,_1,_0.68,_1)] transform ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+        {/* Imagen con <picture> adaptativa */}
+        <picture>
+          <source
+            srcSet="/img/huasteca-hero.webp"
+            type="image/webp"
+            media="(min-width: 640px)"
+          />
+          <img
+            src={useHeavyImage ? "/img/huasteca-hero.webp" : "/img/huasteca-hero-light.jpg"}
+            alt="Escalada en la Huasteca"
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out ${
+              bgLoaded ? "opacity-100" : "opacity-0"
             }`}
-          >
-            Aprende, crece y desarrolla tus habilidades como escalador
-          </div>
+            loading={useHeavyImage ? "eager" : "lazy"}
+            decoding="async"
+            fetchpriority={useHeavyImage ? "high" : "low"}
+          />
+        </picture>
 
-          <div className="hero-secondary-text text-center md:text-left text-base md:text-xl text-white font-[Inter] font-normal mt-4 md:mt-1">
+        {/* Placeholder en baja calidad */}
+        {!bgLoaded && (
+          <img
+            src="/img/huasteca-hero-lazy.jpg"
+            alt="Preload bajo"
+            className="absolute inset-0 w-full h-full object-cover object-center blur-md"
+            loading="lazy"
+          />
+        )}
+
+        {/* Contenido */}
+        <div className="hero-wrapper relative z-10 flex flex-col justify-center h-full px-6 md:pl-25 bg-black/10">
+          <h1 className="hero-text text-center md:text-left w-full md:w-[70%] text-4xl md:text-8xl text-white font-black mt-10 md:mt-15 font-[Inter]">
+            Aprende, crece y desarrolla tus habilidades como escalador
+          </h1>
+
+          <p className="hero-secondary-text text-center md:text-left text-base md:text-xl text-white font-normal mt-4 md:mt-1 font-[Inter]">
             Conviértete en la mejor versión de ti mismo mientras desafías la gravedad.
-          </div>
+          </p>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8 w-full">
             <a href="#testimonios">

@@ -2,13 +2,15 @@
 import "./App.css";
 import Navbar from "./components/navbar";
 import Hero from "./components/Hero";
-import Nosotros from "./components/Nosotros";
-import Servicios from "./components/Servicios";
-import Contact from "./components/Contact";
-import Testimonios from "./components/testimonios/testimonios";
-import { useRef } from "react";
+import { useRef, lazy, Suspense } from "react";
 import { useInView } from "react-intersection-observer";
 import { HelmetProvider } from "react-helmet-async";
+
+// Lazy loaded components
+const Nosotros = lazy(() => import("./components/Nosotros"));
+const Servicios = lazy(() => import("./components/Servicios"));
+const Contact = lazy(() => import("./components/Contact"));
+const Testimonios = lazy(() => import("./components/testimonios/testimonios"));
 
 function App() {
   const heroRef = useRef(null);
@@ -51,41 +53,43 @@ function App() {
           <Hero />
         </section>
 
-        <section id="nosotros" ref={nosotrosRef} className="min-h-screen bg-white">
-          <Nosotros />
-        </section>
+        <Suspense fallback={<div className="min-h-screen">Cargando...</div>}>
+          <section id="nosotros" ref={nosotrosRef} className="min-h-screen bg-white">
+            <Nosotros />
+          </section>
 
-        <section
-          id="testimonios"
-          ref={(el) => {
-            testimoniosRef.current = el;
-            testimoniosInViewRef(el);
-          }}
-        >
-          <Testimonios />
-        </section>
+          <section
+            id="testimonios"
+            ref={(el) => {
+              testimoniosRef.current = el;
+              testimoniosInViewRef(el);
+            }}
+          >
+            <Testimonios />
+          </section>
 
-        <section
-          id="servicios"
-          ref={(el) => {
-            serviciosRef.current = el;
-            serviciosInViewRef(el);
-          }}
-          className="min-h-screen bg-black"
-        >
-          <Servicios />
-        </section>
+          <section
+            id="servicios"
+            ref={(el) => {
+              serviciosRef.current = el;
+              serviciosInViewRef(el);
+            }}
+            className="min-h-screen bg-black"
+          >
+            <Servicios />
+          </section>
 
-        <section
-          id="contacto"
-          ref={(el) => {
-            contactoRef.current = el;
-            contactoInViewRef(el);
-          }}
-          className="min-h-screen bg-white"
-        >
-          <Contact />
-        </section>
+          <section
+            id="contacto"
+            ref={(el) => {
+              contactoRef.current = el;
+              contactoInViewRef(el);
+            }}
+            className="min-h-screen bg-white"
+          >
+            <Contact />
+          </section>
+        </Suspense>
       </div>
     </HelmetProvider>
   );
