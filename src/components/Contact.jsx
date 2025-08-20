@@ -26,6 +26,7 @@ const cursosDisponibles = [
 function Contact() {
   const [formData, setFormData] = useState({
     nombre: '',
+    celular: '',
     email: '',
     programa: '',
     notas: ''
@@ -36,9 +37,10 @@ function Contact() {
   };
 
   const whatsappLink = () => {
-    const { nombre, email, programa, notas } = formData;
+    const { nombre, celular, email, programa, notas } = formData;
     const mensaje = `Hola, me gustaría más información.%0A
 Nombre: ${nombre || "No especificado"}%0A
+Celular: ${celular || "No especificado"}%0A
 Email: ${email || "No especificado"}%0A
 Programa: ${programa || "No especificado"}%0A
 Notas: ${notas || "Ninguna"}`;
@@ -46,12 +48,12 @@ Notas: ${notas || "Ninguna"}`;
   };
 
   const sendEmail = () => {
-    const { nombre, email, programa, notas } = formData;
+    const { nombre, celular, email, programa, notas } = formData;
 
     emailjs.send(
       SERVICE_ID,
       TEMPLATE_ID,
-      { nombre, email, programa, notas },
+      { nombre, celular, email, programa, notas },
       PUBLIC_KEY
     ).then(() => {
       MySwal.fire({
@@ -77,9 +79,9 @@ Notas: ${notas || "Ninguna"}`;
   const handleSubmit = (e, viaWhatsapp = true) => {
     e.preventDefault();
 
-    const { nombre, email, programa } = formData;
+    const { nombre, celular, email, programa } = formData;
 
-    if (!viaWhatsapp && (!nombre || !email || !programa)) {
+    if (!viaWhatsapp && (!nombre || !celular || !email || !programa)) {
       MySwal.fire({
         icon: 'warning',
         title: 'Información incompleta',
@@ -97,7 +99,7 @@ Notas: ${notas || "Ninguna"}`;
       sendEmail();
     }
 
-    setFormData({ nombre: '', email: '', programa: '', notas: '' });
+    setFormData({ nombre: '', celular: '',  email: '', programa: '', notas: '' });
   };
 
   return (
@@ -117,6 +119,17 @@ Notas: ${notas || "Ninguna"}`;
                   onChange={handleChange}
                   className="w-full mt-1 p-2 bg-gray-300 text-black rounded text-sm"
                   placeholder="Tu nombre"
+                />
+              </label>
+
+              <label className="font-extralight">
+                Celular
+                <input
+                  name="celular"
+                  value={formData.celular}
+                  onChange={handleChange}
+                  className="w-full mt-1 p-2 bg-gray-300 text-black rounded text-sm"
+                  placeholder="81 1234 5678"
                 />
               </label>
 
